@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>注册表单</title>
+    <style>
+        .form-box {
+            border: 1px dashed #999;
+            padding: 20px;
+            width: 320px;
+            margin: 20px auto;
+            font-size: 14px;
+            color: #333;
+        }
+        .form-row {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .form-row label {
+            width: 50px;
+        }
+        .form-row input[type="text"], 
+        .form-row input[type="password"] {
+            width: 120px;
+        }
+        .email-row input[type="text"] {
+            width: 100px;
+            margin-right: 5px;
+        }
+        .radio-check-group input {
+            margin-left: 0;
+            margin-right: 3px;
+        }
+        .radio-check-group span {
+            margin-right: 10px;
+        }
+        .intro-box {
+            margin-bottom: 8px;
+        }
+        .intro-box textarea {
+            width: 100%;
+            height: 100px;
+            margin-top: 5px;
+            resize: vertical;
+        }
+        .file-upload {
+            margin-bottom: 15px;
+        }
+        .submit-box {
+            border-top: 1px solid #ccc;
+            text-align: center;
+            padding-top: 15px;
+        }
+        /* 方便返回简历的链接样式 */
+        .back-link {
+            text-align: center;
+            margin-top: 15px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-box">
+        <form action="#" method="POST">
+            <div class="form-row">
+                <label>昵称：</label>
+                <input type="text" name="nickname">
+            </div>
+            
+            <div class="form-row">
+                <label>密码：</label>
+                <input type="password" name="password">
+            </div>
+            
+            <div class="form-row email-row">
+                <label>邮箱：</label>
+                <input type="text" name="email_prefix">
+                <select name="email_suffix">
+                    <option value="@qq.com">qq.com</option>
+                    <option value="@163.com">163.com</option>
+                    <option value="@gmail.com">gmail.com</option>
+                </select>
+            </div>
+            
+            <div class="form-row radio-check-group">
+                <label>性别：</label>
+                <input type="radio" name="gender" value="male" checked><span>男</span>
+                <input type="radio" name="gender" value="female"><span>女</span>
+            </div>
+            
+            <div class="form-row radio-check-group">
+                <label>爱好：</label>
+                <input type="checkbox" name="hobby" value="travel"><span>旅游</span>
+                <input type="checkbox" name="hobby" value="photo"><span>摄影</span>
+                <input type="checkbox" name="hobby" value="sports"><span>运动</span>
+            </div>
+            
+            <div class="intro-box">
+                <label>个人简介：</label>
+                <textarea name="intro"></textarea>
+            </div>
+            
+            <div class="file-upload">
+                <label style="display: block; margin-bottom: 5px;">上传个人照片：</label>
+                <input type="file" name="photo">
+            </div>
+            
+            <div class="submit-box">
+                <input type="submit" value="立即注册">
+            </div>
+        </form>
+    </div>
+
+<a href="index.html" class="back-link">返回我的简历</a>
+</body>
+</html>
